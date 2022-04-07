@@ -1,2 +1,3 @@
-# do-next-type-fire-tail-auth-base
-Base Next.js, typscript, firebase, tailwind with auth and protect routes
+##### Base Next js with Type script, Firebase, Tailwind, and Next Auth
+
+ToDo: Finish this readme!
