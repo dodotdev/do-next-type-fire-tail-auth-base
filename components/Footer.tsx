@@ -118,11 +118,8 @@ const Footer = () => {
           <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
             <div className="flex space-x-6 md:order-2">
               {footerNavigation.social.map((item) => (
-                <Link href={item.href}>
-                  <a
-                    key={item.name}
-                    className="text-gray-400 hover:text-gray-500"
-                  >
+                <Link href={item.href} key={item.name}>
+                  <a className="text-gray-400 hover:text-gray-500">
                     <span className="sr-only">{item.name}</span>
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </a>
@@ -130,7 +127,7 @@ const Footer = () => {
               ))}
             </div>
             <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              &copy; 2022 Doc.dev, Inc. All rights reserved.
+              &copy; 2022 Do Dev LLC, All rights reserved.
             </p>
           </div>
         </div>

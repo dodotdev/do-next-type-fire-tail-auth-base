@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-
+import { parseCookies, setCookie, destroyCookie } from 'nookies';
 import {
   GoogleAuthProvider,
   signInWithPopup,
@@ -8,7 +8,9 @@ import {
 import { auth, provider } from '@/lib/firebase';
 
 type authContextType = {
-  user: any;
+  user: {
+    accessToken: string;
+  } | null;
   loading: boolean;
   login: () => void;
   logout: () => void;
@@ -38,8 +40,16 @@ export const AuthProvider = ({ children }: any) => {
       Works 
     */
   }
-  onAuthStateChanged(auth, (currentUser) => {
+  onAuthStateChanged(auth, (currentUser: any) => {
+    // console.log('STATE CHANGE', currentUser);
     setUser(currentUser);
+
+    if (currentUser)
+      setCookie(undefined, 'accessToken', currentUser.accessToken, {
+        path: '/',
+      });
+    else destroyCookie(null, 'accessToken', { path: '/' });
+    // console.log('STATE CHANGE', user);
     setLoading(false);
   });
 

@@ -17,9 +17,8 @@ const TopNav = () => {
     <div>
       <nav className="flex space-x-4">
         {newArray.map((item) => (
-          <Link href={item.href}>
+          <Link href={item.href} key={item.name}>
             <a
-              key={item.name}
               className={classNames(
                 'text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-1 hover:bg-opacity-10',
                 item.current
