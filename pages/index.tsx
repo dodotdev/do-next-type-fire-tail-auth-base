@@ -3,6 +3,7 @@ import Actions from '@/components/Actions';
 
 import Announcments from '@/components/Announcments';
 import Members from '@/components/Members';
+import Socials from '@/components/Socials';
 
 export default function Example() {
   return (
@@ -22,6 +23,8 @@ export default function Example() {
 
           {/* Right column */}
           <div className="grid grid-cols-1 gap-4">
+            {/* Socials */}
+            {/* <Socials /> */}
             {/* Announcements */}
             <Announcments />
 
