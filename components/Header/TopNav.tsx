@@ -1,11 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
 import { navigation } from '@/data/home';
 import { classNames } from '@/lib/classNames';
 
+import { useAuth } from '@/contexts/auth';
+
 const TopNav = () => {
   const router = useRouter();
+  const { isAuth } = useAuth();
 
   const newArray = Array.from(navigation, (each) => {
     if (each.href === router.pathname) each.current = true;
@@ -14,7 +18,7 @@ const TopNav = () => {
   });
 
   return (
-    <div>
+    <>
       <nav className="flex space-x-4">
         {newArray.map((item) => (
           <Link href={item.href} key={item.name}>
@@ -35,7 +39,7 @@ const TopNav = () => {
       {/* <div className="text-white">
         <pre>{JSON.stringify(newArray, null, 2)}</pre>
       </div> */}
-    </div>
+    </>
   );
 };
 

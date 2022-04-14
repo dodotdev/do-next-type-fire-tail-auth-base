@@ -12,23 +12,22 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <div className="min-h-full">
         <AuthProvider>
-          <Header />
-          <main className="-mt-24 pb-8">
-            {/* SessionProvider part of NextAuth */}
-            {/* <SessionProvider session={pageProps.session} refetchInterval={0}> */}
-            <Component {...pageProps} />
-            {/* </SessionProvider> */}
-          </main>
-        </AuthProvider>
-        <Footer />
-        {/* <footer>
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-            <div className="border-t border-gray-200 py-8 text-sm text-gray-500 text-center sm:text-left">
-              <span className="block sm:inline">&copy; 2022 Do Dev LLC.</span>{' '}
-              <span className="block sm:inline">All rights reserved.</span>
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="relative flex flex-wrap items-center justify-center lg:justify-between">
+              <div className="w-full">
+                <Header />
+                <main className="-mt-24 pb-8">
+                  {/* SessionProvider part of NextAuth */}
+                  {/* <SessionProvider session={pageProps.session} refetchInterval={0}> */}
+
+                  <Component {...pageProps} />
+                  {/* </SessionProvider> */}
+                </main>
+                <Footer />
+              </div>
             </div>
           </div>
-        </footer> */}
+        </AuthProvider>
       </div>
     </>
   );

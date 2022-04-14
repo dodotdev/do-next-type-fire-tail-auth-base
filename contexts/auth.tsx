@@ -12,6 +12,7 @@ type authContextType = {
     accessToken: string;
   } | null;
   loading: boolean;
+  isAuth: boolean;
   login: () => void;
   logout: () => void;
 };
@@ -19,6 +20,7 @@ type authContextType = {
 const authContextDefaultValues: authContextType = {
   user: null,
   loading: true,
+  isAuth: false,
   login: () => {},
   logout: () => {},
 };
@@ -32,6 +34,7 @@ type Props = {
 export const AuthProvider = ({ children }: any) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
 
   {
     /* 
@@ -44,12 +47,16 @@ export const AuthProvider = ({ children }: any) => {
     // console.log('STATE CHANGE', currentUser);
     setUser(currentUser);
 
-    if (currentUser)
+    if (currentUser) {
+      setIsAuth(true);
       setCookie(undefined, 'accessToken', currentUser.accessToken, {
         path: '/',
       });
-    else destroyCookie(null, 'accessToken', { path: '/' });
-    // console.log('STATE CHANGE', user);
+    } else {
+      setIsAuth(false);
+      destroyCookie(null, 'accessToken', { path: '/' });
+      // console.log('STATE CHANGE', user);
+    }
     setLoading(false);
   });
 
@@ -83,7 +90,7 @@ export const AuthProvider = ({ children }: any) => {
 
   return (
     <>
-      <AuthContext.Provider value={{ user, loading, login, logout }}>
+      <AuthContext.Provider value={{ user, loading, isAuth, login, logout }}>
         {children}
       </AuthContext.Provider>
     </>
