@@ -1,11 +1,31 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useAuth } from '@/contexts/auth';
 
 import { navigation } from '@/data/home';
 import { classNames } from '@/lib/classNames';
 
-import { useAuth } from '@/contexts/auth';
+const DisplayMenuItem = ({ isAuth, item }) => {
+  if (!item.protected || isAuth)
+    return (
+      <Link href={item.href} key={item.name}>
+        <a
+          className={classNames(
+            'text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-1 hover:bg-opacity-10',
+            item.current
+              ? 'text-white bg-gray-300 bg-opacity-40 hover:bg-opacity-40'
+              : 'text-cyan-100',
+          )}
+          aria-current={item.current ? 'page' : undefined}
+        >
+          {item.name}
+        </a>
+      </Link>
+    );
+
+  return <></>;
+};
 
 const TopNav = () => {
   const router = useRouter();
@@ -21,19 +41,9 @@ const TopNav = () => {
     <>
       <nav className="flex space-x-4">
         {newArray.map((item) => (
-          <Link href={item.href} key={item.name}>
-            <a
-              className={classNames(
-                'text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-1 hover:bg-opacity-10',
-                item.current
-                  ? 'text-white bg-gray-300 bg-opacity-40 hover:bg-opacity-40'
-                  : 'text-cyan-100',
-              )}
-              aria-current={item.current ? 'page' : undefined}
-            >
-              {item.name}
-            </a>
-          </Link>
+          <>
+            <DisplayMenuItem isAuth={isAuth} item={item} />
+          </>
         ))}
       </nav>
       {/* <div className="text-white">

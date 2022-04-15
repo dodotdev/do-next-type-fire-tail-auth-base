@@ -84,7 +84,7 @@ export const AuthProvider = ({ children }: any) => {
 
   const logout = () => {
     auth.signOut();
-    console.log('logout');
+    setIsAuth(false);
     setUser(null);
   };
 

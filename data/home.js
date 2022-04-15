@@ -16,13 +16,13 @@ export const user = {
 };
 
 export const navigation = [
-  { name: 'Home', href: '/', current: false },
-  { name: 'One', href: '/one', current: false },
-  { name: 'Two', href: '/two', current: false },
-  { name: 'Three', href: '/three', current: false },
-  { name: 'Four', href: '/four', current: false },
-  { name: 'Login', href: '/login', current: false },
-  { name: 'Protected', href: '/protected', current: false },
+  { name: 'Home', href: '/', current: false, protected: false },
+  { name: 'One', href: '/one', current: false, protected: false },
+  { name: 'Two', href: '/two', current: false, protected: false },
+  { name: 'Three', href: '/three', current: false, protected: false },
+  { name: 'Four', href: '/four', current: false, protected: false },
+  // { name: 'Login', href: '/login', current: false, protected: false },
+  { name: 'Protected', href: '/protected', current: false, protected: true },
 ];
 
 export const userNavigation = [

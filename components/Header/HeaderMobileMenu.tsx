@@ -48,7 +48,12 @@ const HeaderMobileMenu = () => {
                       />
                     </div>
                     <div className="-mr-2">
-                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500">
+                      <Popover.Button
+                        className="bg-white rounded-md p-2 inline-flex items-center 
+                                                justify-center text-gray-400 hover:text-gray-500 
+                                                hover:bg-gray-100 focus:outline-none focus:ring-0
+                                                focus:ring-inset focus:ring-cyan-500"
+                      >
                         <span className="sr-only">Close menu</span>
                         <XIcon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
@@ -59,7 +64,8 @@ const HeaderMobileMenu = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800"
+                        className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium 
+                                    hover:bg-gray-100 hover:text-gray-800"
                       >
                         {item.name}
                       </a>
@@ -85,7 +91,9 @@ const HeaderMobileMenu = () => {
                     </div>
                     <button
                       type="button"
-                      className="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                      className="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full 
+                                  hover:text-gray-500 focus:outline-none 
+                                  focus:ring-0 focus:ring-offset-2 focus:ring-cyan-500"
                     >
                       <span className="sr-only">View notifications</span>
                       <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -96,7 +104,8 @@ const HeaderMobileMenu = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800"
+                        className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium 
+                                    hover:bg-gray-100 hover:text-gray-800"
                       >
                         {item.name}
                       </a>
@@ -104,7 +113,8 @@ const HeaderMobileMenu = () => {
                     <a
                       key={'44444'}
                       href={'#'}
-                      className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800"
+                      className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium 
+                                  hover:bg-gray-100 hover:text-gray-800"
                     >
                       Sign out
                     </a>

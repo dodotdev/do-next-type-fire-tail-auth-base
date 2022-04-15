@@ -12,8 +12,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FooterLinks />
         <FooterNewsletter />
-        <div className="mt-4 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-8">
-          <div className="flex space-x-6 md:order-2">
+        <div className=" mt-4 border-t border-gray-200 md:flex md:items-center md:justify-between lg:mt-8">
+          <div className="flex space-x-6 md:order-2 mb-6 mt-6">
             {footerNavigation.social.map((item) => (
               <Link href={item.href} key={item.name}>
                 <a className="text-gray-400 hover:text-gray-500">
@@ -23,7 +23,7 @@ const Footer = () => {
               </Link>
             ))}
           </div>
-          <p className="mt-0 text-base text-gray-400 md:mt-0 md:order-1">
+          <p className="mt-0 text-base text-gray-400 md:order-1">
             &copy; 2022 Do Dev LLC, All rights reserved.
           </p>
         </div>
