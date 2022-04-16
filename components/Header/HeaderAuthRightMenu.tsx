@@ -5,12 +5,18 @@ import { SearchIcon, LogoutIcon } from '@heroicons/react/solid';
 
 import { signOutUser } from '@/lib/firebase';
 
-import { user, userNavigation, navigation } from '@/data/home';
+import { useAuth } from '@/contexts/auth';
+
+import { userNavigation, navigation } from '@/data/home';
 
 import TopNav from './TopNav';
 
 import { classNames } from '@/lib/classNames';
 const HeaderAuthRightMenu = () => {
+  const { user } = useAuth();
+
+  if (!user) return <></>;
+
   return (
     <div className="hidden lg:ml-4 lg:flex lg:items-center lg:py-5 lg:pr-0.5">
       <button
@@ -26,7 +32,7 @@ const HeaderAuthRightMenu = () => {
         <div>
           <Menu.Button className="bg-white rounded-full flex text-sm ring-2 ring-white ring-opacity-20 focus:outline-none focus:ring-opacity-100">
             <span className="sr-only">Open user menu</span>
-            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+            <img className="h-8 w-8 rounded-full" src={user.photoURL} alt="" />
           </Menu.Button>
         </div>
         <Transition

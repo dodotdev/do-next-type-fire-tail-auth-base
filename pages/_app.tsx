@@ -12,8 +12,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <div className="min-h-full">
         <AuthProvider>
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div className="relative flex flex-wrap items-center justify-center lg:justify-between">
+          <div className="mx-auto w-full">
+            <div className="relative flex flex-wrap items-center justify-center lg:justify-between ">
               <div className="w-full">
                 <Header />
                 <main className="-mt-24 pb-8">

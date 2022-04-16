@@ -7,10 +7,10 @@ import {
 } from 'firebase/auth';
 import { auth, provider } from '@/lib/firebase';
 
+import { User } from '@/types/auth';
+
 type authContextType = {
-  user: {
-    accessToken: string;
-  } | null;
+  user: User;
   loading: boolean;
   isAuth: boolean;
   login: () => void;

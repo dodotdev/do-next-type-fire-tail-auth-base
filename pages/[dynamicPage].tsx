@@ -8,7 +8,7 @@ const dynamicPage = () => {
   return (
     <div>
       <div
-        className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 bg-white mx-8 
+        className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-9xl lg:px-8 bg-white mx-8 
                     rounded-lg p-5 shadow space-y-5 overflow-hidden"
       >
         <h1 className="text-3xl font-bold mb-2">{dynamicPage}</h1>

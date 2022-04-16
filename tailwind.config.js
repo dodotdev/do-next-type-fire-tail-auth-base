@@ -19,6 +19,11 @@ module.exports = {
         rose: colors.rose,
         bgBase: '#F6F9FC',
       },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+        '10xl': '104rem',
+      },
     },
   },
 };

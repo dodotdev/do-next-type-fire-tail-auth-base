@@ -1,8 +1,13 @@
 import React from 'react';
+import { useAuth } from '@/contexts/auth';
 
-import { user, stats } from '@/data/home';
+import { stats } from '@/data/home';
 
 const Welcome = () => {
+  const { user } = useAuth();
+
+  if (!user) return <></>;
+
   return (
     <div>
       <section aria-labelledby="profile-overview-title">
@@ -16,7 +21,7 @@ const Welcome = () => {
                 <div className="flex-shrink-0">
                   <img
                     className="mx-auto h-20 w-20 rounded-full"
-                    src={user.imageUrl}
+                    src={user.photoURL}
                     alt=""
                   />
                 </div>
@@ -25,11 +30,9 @@ const Welcome = () => {
                     Welcome back,
                   </p>
                   <p className="text-xl font-bold text-gray-900 sm:text-2xl">
-                    {user.name}
+                    {user.displayName}
                   </p>
-                  <p className="text-sm font-medium text-gray-600">
-                    {user.role}
-                  </p>
+                  <p className="text-sm font-medium text-gray-600">Roles</p>
                 </div>
               </div>
               <div className="mt-5 flex justify-center sm:mt-0">
