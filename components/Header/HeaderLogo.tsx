@@ -1,5 +1,3 @@
-import React from 'react';
-
 const HeaderLogo = () => {
   return (
     <div className="absolute left-0 py-5 flex-shrink-0 lg:static">

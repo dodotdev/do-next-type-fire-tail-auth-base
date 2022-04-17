@@ -1,15 +1,14 @@
 import { Fragment } from 'react';
-import { Menu, Popover, Transition } from '@headlessui/react';
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
-import { SearchIcon, LogoutIcon } from '@heroicons/react/solid';
+import { Menu, Transition } from '@headlessui/react';
+import { BellIcon } from '@heroicons/react/outline';
 
 import { signOutUser } from '@/lib/firebase';
 
 import { useAuth } from '@/contexts/auth';
 
-import { userNavigation, navigation } from '@/data/home';
+import { userNavigation } from '@/data/home';
 
-import TopNav from './TopNav';
+// import TopNav from './TopNav';
 
 import { classNames } from '@/lib/classNames';
 const HeaderAuthRightMenu = () => {

@@ -41,9 +41,7 @@ const TopNav = () => {
     <>
       <nav className="flex space-x-4">
         {newArray.map((item) => (
-          <>
-            <DisplayMenuItem isAuth={isAuth} item={item} />
-          </>
+          <DisplayMenuItem isAuth={isAuth} item={item} key={item.name} />
         ))}
       </nav>
       {/* <div className="text-white">

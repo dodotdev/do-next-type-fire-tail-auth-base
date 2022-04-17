@@ -11,24 +11,25 @@ import HeaderMenuButton from './HeaderMenuButton';
 const HeaderAuth = () => {
   const { isAuth } = useAuth();
 
+  console.log('OPEN TEST');
+
   return (
     <>
       <Popover
         as="header"
         className="pb-24 bg-gradient-to-r from-blue-900 to-blue-400"
       >
-        {({ open }) => (
+        {({ open, close }) => (
           <>
-            <div className="w-full mx-auto px-4 sm:px-6 lg:max-w-9xl lg:px-8">
+            <div className="w-full mx-auto px-4 sm:px-6 md:max-w-9xl lg:px-8">
               <div className="relative flex flex-wrap items-center justify-center lg:justify-between">
                 <HeaderLogo />
-
                 {isAuth ? <HeaderAuthRightMenu /> : <HeaderRightMenu />}
                 <HeaderMenu />
-                <HeaderMenuButton open={open} />
+                <HeaderMenuButton open={open} />{' '}
               </div>
             </div>
-            <HeaderMobileMenu />
+            <HeaderMobileMenu close={close} />
           </>
         )}
       </Popover>

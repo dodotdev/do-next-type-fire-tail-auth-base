@@ -44,7 +44,6 @@ export const AuthProvider = ({ children }: any) => {
     */
   }
   onAuthStateChanged(auth, (currentUser: any) => {
-    // console.log('STATE CHANGE', currentUser);
     setUser(currentUser);
 
     if (currentUser) {
@@ -55,7 +54,6 @@ export const AuthProvider = ({ children }: any) => {
     } else {
       setIsAuth(false);
       destroyCookie(null, 'accessToken', { path: '/' });
-      // console.log('STATE CHANGE', user);
     }
     setLoading(false);
   });

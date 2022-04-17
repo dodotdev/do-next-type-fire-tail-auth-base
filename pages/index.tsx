@@ -8,7 +8,7 @@ import Socials from '@/components/Socials';
 export default function Example() {
   return (
     <>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-9xl lg:px-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 md:max-w-9xl lg:px-8">
         <h1 className="sr-only">Profile</h1>
         {/* Main 3 column grid */}
         <div className="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">

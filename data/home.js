@@ -146,14 +146,14 @@ export const footerNavigation = {
     { name: 'Pricing', href: '/pricing' },
     { name: 'Documentation', href: '/documentation' },
     { name: 'Guides', href: '/guides' },
-    { name: 'API Status', href: 'apiStatus' },
+    { name: 'API Status', href: '/apiStatus' },
   ],
   company: [
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Jobs', href: '/jobs' },
     { name: 'Press', href: '/press' },
-    { name: 'Partners', href: 'partners' },
+    { name: 'Partners', href: '/partners' },
   ],
   legal: [
     { name: 'Claim', href: '/claim' },
