@@ -11,23 +11,24 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <div className="min-h-full">
-        <AuthProvider>
-          <div className="mx-auto w-full">
-            <div className="relative flex flex-wrap items-center justify-center lg:justify-between ">
-              <div className="w-full">
-                <Header />
-                <main className="-mt-24 pb-8">
-                  {/* SessionProvider part of NextAuth */}
-                  {/* <SessionProvider session={pageProps.session} refetchInterval={0}> */}
+        {/* <AuthProvider> */}
+        <div className="mx-auto w-full">
+          <div className="relative flex flex-wrap items-center justify-center lg:justify-between ">
+            <div className="w-full">
+              <Header />
+              {/* <main className="-mt-24 pb-8"> */}
+              <main>
+                {/* SessionProvider part of NextAuth */}
+                {/* <SessionProvider session={pageProps.session} refetchInterval={0}> */}
 
-                  <Component {...pageProps} />
-                  {/* </SessionProvider> */}
-                </main>
-                <Footer />
-              </div>
+                <Component {...pageProps} />
+                {/* </SessionProvider> */}
+              </main>
+              {/* <Footer /> */}
             </div>
           </div>
-        </AuthProvider>
+        </div>
+        {/* </AuthProvider> */}
       </div>
     </>
   );

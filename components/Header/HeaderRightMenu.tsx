@@ -23,7 +23,7 @@ const HeaderAuthRightMenu = () => {
                             px-4 py-1 border border-transparent text-base font-medium 
                             rounded-md shadow-sm text-white hover:from-green-600 hover:to-green-500"
         >
-          Sign Up
+          Join
         </button>
       </div>
     </div>
