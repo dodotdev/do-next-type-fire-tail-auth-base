@@ -1,12 +1,15 @@
 import { Popover } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import HeaderLogo from './HeaderLogo';
 
 const HeaderMenuButton = ({ open }) => {
   return (
-    <div className="flex flex-row justify-between lg:hidden w-full">
-      <div></div>
-      <div className="flex text-blue-100 tracking-wider text-xl items-center -ml-2 ">
-        SanCapBWA
+    <div className="flex flex-row justify-between lg:hidden w-full items-center">
+      <div className="pt-2 ">
+        <HeaderLogo />
+      </div>
+      <div className="text-cyan-100 text-lg tracking-wider">
+        Sanible Captiva BWA
       </div>
 
       <div className="flex -mr-2">

@@ -12,12 +12,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <div className="min-h-full">
         {/* <AuthProvider> */}
-        <div className="mx-auto w-full">
+        <div className="mx-auto w-full bg-blue-50 h-screen">
           <div className="relative flex flex-wrap items-center justify-center lg:justify-between ">
             <div className="w-full">
               <Header />
-              {/* <main className="-mt-24 pb-8"> */}
-              <main>
+              <main className="-mt-48 pb-8">
                 {/* SessionProvider part of NextAuth */}
                 {/* <SessionProvider session={pageProps.session} refetchInterval={0}> */}
 
