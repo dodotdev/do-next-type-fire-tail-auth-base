@@ -16,15 +16,18 @@ const HeaderAuthRightMenu = () => {
         </Link>
       </div>
       <div className="rounded-md sm:ml-3 sm:flex-shrink-0">
-        <button
-          type="submit"
-          className="w-full flex items-center justify-center 
+        <Link href="/membership">
+          <a>
+            <div
+              className="w-full flex items-center justify-center 
                             bg-gradient-to-r from-green-400 to-green-400 bg-origin-border 
                             px-4 py-1 border border-transparent text-base font-medium 
                             rounded-md shadow-sm text-white hover:from-green-600 hover:to-green-500"
-        >
-          Join
-        </button>
+            >
+              Join Now
+            </div>
+          </a>
+        </Link>
       </div>
     </div>
   );

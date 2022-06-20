@@ -23,6 +23,7 @@ import Welcome from '@/components/Welcome';
 import Mission from '@/components/Mission';
 
 import AboutUsMain from '@/components/AboutUsMain';
+import Socials from '@/components/Socials';
 
 export default function Main() {
   return (
@@ -30,6 +31,7 @@ export default function Main() {
       <HeroIntro />
       <Mission />
       <AboutUsMain />
+      {/* <Socials /> */}
     </div>
   );
 }

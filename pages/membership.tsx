@@ -1,6 +1,6 @@
 import React from 'react';
 
-const page = 'Three';
+const page = 'Membership';
 
 const three = () => {
   return (

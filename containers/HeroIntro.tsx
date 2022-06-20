@@ -6,7 +6,7 @@ import Image from 'next/image';
 const HeroIntro = () => {
   return (
     <>
-      <div className="relative rounded-lg bg-white overflow-hidden shadow w-full bg-green-900 ">
+      <div className="relative rounded-lg bg-white overflow-hidden shadow w-full ">
         <div className="  overflow-hidden ">
           <Image
             alt="beach"
