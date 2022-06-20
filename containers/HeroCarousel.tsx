@@ -17,9 +17,9 @@ export default class HeroCarousel extends Component {
           centerSlidePercentage={100}
           dynamicHeight={true}
         >
-          <div className="items-center justify-center rounded shadow-md overflow-hidden h-[300] w-auto">
+          {/* <div className="items-center justify-center rounded shadow-md overflow-hidden h-[300] w-auto">
             <img src="/img/sanibel.jpeg" alt="image5" />
-          </div>
+          </div> */}
           <div className="items-center justify-center rounded shadow-md overflow-hidden h-[300] w-auto">
             <img src="/img/TipsandSipsMudbugs.jpg" alt="image1" />
           </div>

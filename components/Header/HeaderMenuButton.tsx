@@ -9,7 +9,7 @@ const HeaderMenuButton = ({ open }) => {
         <HeaderLogo />
       </div>
       <div className="text-cyan-100 text-lg tracking-wider">
-        Sanible Captiva BWA
+        Sanibel Captiva BWA
       </div>
 
       <div className="flex -mr-2">

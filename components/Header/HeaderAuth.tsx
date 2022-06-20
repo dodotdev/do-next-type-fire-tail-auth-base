@@ -25,7 +25,7 @@ const HeaderAuth = () => {
                   <div className="flex flex-row items-center">
                     <HeaderLogo />
                     <div className="pl-5 text-cyan-100 text-2xl tracking-wider">
-                      Sanible Captiva BWA
+                      Sanibel Captiva BWA
                     </div>
                   </div>
                 </div>

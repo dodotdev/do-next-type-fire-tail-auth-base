@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                 <Component {...pageProps} />
                 {/* </SessionProvider> */}
               </main>
-              {/* <Footer /> */}
+              <Footer />
             </div>
           </div>
         </div>

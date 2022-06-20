@@ -12,7 +12,7 @@ const HeaderMenu = () => {
         </div>
         <div className="px-12 lg:px-0">
           {/* Search */}
-          <div className="hidden lg:block">
+          {/* <div className="hidden lg:block">
             <div className="max-w-xs mx-auto w-full lg:max-w-md">
               <label htmlFor="search" className="sr-only">
                 Search
@@ -30,7 +30,7 @@ const HeaderMenu = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
